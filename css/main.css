@@ -1,3 +1,36 @@
 body {
-  background: #f00;
+  background: #ccccc;
+  font-family: serif;
+}
+
+a[href$=".com"] {
+  color: green;
+}
+
+img {
+  max-width: 300px;
+}
+
+img[src$=".jpg"] {
+  border: 2px solid #000;
+}
+
+.list > li {
+  margin: 10px;
+}
+
+h4 + li {
+  font-size: 30px;
+}
+
+h5 ~ * {
+  font-size: 30px;
+}
+
+li:hover {
+  color: purple;
+}
+
+li:nth-of-type(3n +1) {
+  letter-spacing: 10px;
 }
