@@ -3,34 +3,50 @@ body {
   font-family: serif;
 }
 
-a[href$=".com"] {
-  color: green;
+header {
+  background: #ccc;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-img {
-  max-width: 300px;
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-img[src$=".jpg"] {
-  border: 2px solid #000;
-}
-
-.list > li {
-  margin: 10px;
-}
-
-h4 + li {
+header nav .item {
+  margin: 0 20px;
+  color: white;
   font-size: 30px;
+  position: relative;
 }
 
-h5 ~ * {
-  font-size: 30px;
+header nav .item:last-child::after {
+  display: none;
 }
 
-li:hover {
-  color: purple;
+header nav .item:after {
+  content: "|";
+  position: absolute;
+  top: 0;
+  right: -20px;
 }
 
-li:nth-of-type(3n +1) {
-  letter-spacing: 10px;
+header nav .item a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
 }
